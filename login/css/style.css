@@ -1,0 +1,264 @@
+html {
+  box-sizing: border-box;
+  }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Regular'),
+  url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+  url('../fonts/Montserrat-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Regular'),
+  url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+  url('../fonts/Montserrat-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Regular'),
+  url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+  url('../fonts/Montserrat-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Regular'),
+  url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+  url('../fonts/Montserrat-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+body {
+  min-width: 200px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  background: #1b1d31;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  max-width: 600px;
+  padding: 32px 64px;
+  margin: 24px auto;
+  width: 100%;
+  min-width: 320px;
+  border-radius: 24px;
+  background-color: #24253c;
+}
+
+.logo {
+  display: block;
+  width: 150px;
+  margin: -20px auto ;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 12px;
+  color: white;
+}
+
+ .btn {
+  padding: 14px;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.1px;
+  border-radius: 16px;
+  color: white;
+  background-color: #ba5c44;
+  transition: color 0.2s ease-in-out , background-color 0.2s ease-in-out;
+}
+
+.btn:focus {
+  outline: none;
+  background-color: #c86d56;
+}
+
+.btn:hover {
+  background-color: #c86d56;
+}
+
+.btn:active {
+  background-color: #a9523c;
+}
+
+.form {
+  flex-direction: column;
+}
+
+.form__input {
+  margin-bottom: 24px;
+  padding: 12px;
+  color: white;
+  border-radius: 12px;
+  border: none;
+  background-color: #45476b;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form__input:focus {
+  outline: none;
+}
+
+.form__input:hover {
+  background-color: #50527b;
+}
+
+.pas__wrapper {
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.pas__wrapper input {
+  width: 100%;
+}
+
+.form__checkbox {
+  margin-bottom: 24px;
+  user-select: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  color: #CACACA;
+}
+
+.form__checkbox span {
+  position: relative;
+  display: inline-flex;
+  text-align: center;
+  padding-left: 18px;
+  transition: color .2s ease-in-out;
+}
+
+.form__checkbox:hover span {
+  color: #b1b1b1;
+}
+
+.form__checkbox span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border: 2px solid white;
+  transform: translateY(-50%);
+  transition: border .2s ease-in-out;
+}
+
+.form__checkbox:hover span::before {
+  border: 2px solid #b1b1b1;
+}
+
+.form__checkbox span::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/Check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opasity 0.2s;
+}
+
+.form__checkbox input {
+  background-color: none;
+  appearance: none;
+  position: absolute;
+}
+
+.form__checkbox input:checked + span::after {
+  opacity: 1;
+}
+
+.form__checkbox input:hover + span {
+  outline: none;
+}
+
+.form__checkbox input:active + span {
+  outline: none;
+}
+p {
+  color: white;
+}
+
+a {
+  position: relative;
+  color: #ba5c44;
+}
+
+a:focus {
+  outline-offset: 2px;
+  outline: 2px solid #ba5c44;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  background-color: #ba5c44;
+  opacity: 0;
+}
+
+a:hover::after {
+  opacity: 1;
+}
