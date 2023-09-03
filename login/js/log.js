@@ -1,4 +1,8 @@
-function checkForm(el) {
+document.getElementById('form__reg').addEventListener("submit" , checkForm);
+
+function checkForm(event) {
+  event.preventDefault();
+  var el = document.getElementById('form__reg');
   var name = el.name.value;
   var email = el.email.value;
   var tel = el.tel.value;
@@ -15,5 +19,4 @@ function checkForm(el) {
   else if (pass != repass) alert("повтор пороля не совпал")
   else console.log(arr);
 
-  return false;
 }
