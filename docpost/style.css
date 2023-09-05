@@ -1,0 +1,89 @@
+html {
+ box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+  min-width: 200px;
+	font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  background: var(--bg-1);
+}
+
+/* glob */
+
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+ max-width: 1800px;
+ padding: 0 15px;
+ margin: 0 auto;
+ width: 100%;
+}
+
+.form {
+    padding: 24px;
+    background-color: #f3f1f1;
+    border: 1px solid #AAA; 
+}
+
+.form , .main{
+    flex-direction: column;
+    align-items: center;
+}
+
+.select , .input , .form__input , .calendar{
+    margin-bottom: 24px;
+}
+
+.calendar__list {
+    gap: 12px;
+    flex-wrap: wrap;
+    max-width: 425px;
+}
+
+.calendar__item {
+    padding: 5px;
+    border: 1px solid #AAA;
+    cursor: pointer;
+}
+
+.calendar__item:hover {
+    background-color: #FFF;
+}
+
+.entry {
+  
+    align-self: start;
+
+}

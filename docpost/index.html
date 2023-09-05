@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="flex main">
+        <h1>Запись к врачу</h1>
+        <form action="https://jsonplaceholder.typicode.com/posts" id="form" method="post" class="flex form">
+            <label for="name" class="form-title">Ваше ФИО</label>
+            <input class="form__input" type="text" name="name" placeholder="Фамилия, имя и&nbsp;отчество*">
+            <label for="birthday" class="form-title">
+                Ваша дата рождения
+            </label>
+            <input type="date" class="input" name="birthday" id="birthday">
+            <label for="doctor" class="form-title">Доктор</label>
+            <select class="select"  name="doctor" id="doctor">
+                <option value="" disabled selected>
+                    Выберите доктора
+                </option>
+                <option value="doc1">
+                    doc1
+                </option>
+                <option value="doc2">
+                    doc2
+                </option>
+                <option value="doc3">
+                    doc3
+                </option>
+                <option value="doc4">
+                    doc4
+                </option>
+            </select>
+            <label for="data" class="form-title">
+                Дата приема
+            </label>
+            <input type="date" class="input" name="data" id="data">
+            <input type="hidden" class="input" name="time" id="time">
+            <div class="calendar">
+                <ul class="calendar__list list-reset flex">
+                    <li class="calendar__item">12:00-12:30</li>
+                    <li class="calendar__item">12:30-13:00</li>
+                    <li class="calendar__item">13:00-13:30</li>
+                    <li class="calendar__item">13:30-14:00</li>
+                    <li class="calendar__item">14:00-14:30</li>
+                    <li class="calendar__item">14:30-15:00</li>
+                    <li class="calendar__item">15:00-15:30</li>
+                    <li class="calendar__item">15:30-16:00</li>
+                </ul>
+                <p id="time_text" class="time_text"> Время записи:</p>
+            </div>            
+            <button type="submit">Записаться</button>
+        </form>
+    </main>
+ <script src="js.js"></script>
+</body>
+</html>
